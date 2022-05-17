@@ -6,6 +6,14 @@ import java.util.Random;
  * 工具类
  */
 public class ItheimaUtil {
+
+    /**
+     * 由于工具类无需创建对象，所以把其构造器私有化会显得很专业
+     */
+    private ItheimaUtil(){
+    }
+
+
     /**
      * 静态方法
      */
@@ -25,5 +33,4 @@ public class ItheimaUtil {
 //        System.out.println("验证码："+ code);
         return code;
     }
-
 }
