@@ -1,7 +1,7 @@
 package com.itheima.d5_innerclass_static;
 
 //外部类
-public class Outter {
+public class Outer {
     //静态成员内部类（和普通类没区别）
     public static int a = 100;
     //不能访问实例成员
@@ -15,9 +15,9 @@ public class Outter {
             System.out.println("名称：" + name);
             //可以访问外部类的公开静态成员变量
             System.out.println(a);
-//            System.out.println(hobby);    报错
-            Outter o = new Outter();
-            //只能通过对象去访问
+//            System.out.println(hobby);    直接访问外部类实例成员变量报错
+            // 只能通过创建对象的方法去访问
+            Outer o = new Outer();
             System.out.println(o.hobby);
         }
         public Inner() {
