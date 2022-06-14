@@ -7,5 +7,8 @@ public class Test {
         in.setName("小明");
         in.show();
         Outer.Inner.test();
+        System.out.println("==========================");
+        Outer.Inner in1 = new Outer("爱听课").new Inner();
+        in1.show();
     }
 }
