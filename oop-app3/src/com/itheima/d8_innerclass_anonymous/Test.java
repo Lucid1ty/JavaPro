@@ -1,6 +1,12 @@
 package com.itheima.d8_innerclass_anonymous;
 
 // 学习匿名内部类的形式和特点
+/*
+特点、作用总结
+    1.匿名内部类是一个没有名字的内部类
+    2.匿名内部类写出来就会产生一个匿名内部类对象
+    3.方便创建子类对象，简化代码编写
+ */
 public class Test {
     public static void main(String[] args) {
         // 之前的写法
@@ -28,7 +34,7 @@ class Tiger extends Animal{
 }
 
 
-// 抽象的动物类
+// 抽象的动物类(抽象类不能创建对象)
 abstract class Animal{
     public abstract void run();
 }
