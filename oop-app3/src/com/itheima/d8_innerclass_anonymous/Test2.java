@@ -10,6 +10,7 @@ public class Test2 {
             }
         };
         go(s);
+
         System.out.println("=========================");
         Swimming s1 = new Swimming() {
             @Override
@@ -18,6 +19,14 @@ public class Test2 {
             }
         };
         go(s1);
+
+        System.out.println("=========================");
+        go(new Swimming() {
+            @Override
+            public void swim() {
+                System.out.println("运动员游的更快！！！");
+            }
+        });
     }
 
 
