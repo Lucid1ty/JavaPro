@@ -66,5 +66,28 @@ public class Student {
     }
 
 
+    /**
+     * 自己重写 equals 方法
+     * 两个对象中的内容一样则认为是相等的
+     */
+    @Override
+    public boolean equals(Object o){
+        // 1.判断传入的 o 是不是学生类型的
+        if (o instanceof Student){
+            // 将 Object 类型的 o 强制转换为 Student 类型
+            Student s2 = (Student) o;
+            // 谁调用这个方法，谁就是 this，字符串比较用 equals
+//            if (this.name.equals(s2.name) && this.sex == s2.sex && this.age == s2.age){
+//                return true;
+//            }else {
+//                return false;
+//            }
+            // 上面这堆逻辑写成一行代码：
+            return this.name.equals(s2.name) && this.sex == s2.sex && this.age == s2.age;
+        }else {
+            // 学生只能和学生比较，否则结果一定是 false
+            return false;
+        }
+    }
 
 }
